@@ -1,5 +1,6 @@
 import "./App.css";
-
+import Todo, { todoData } from "./Todo";
+todoData;
 function App() {
   const studentInfo = [
     {
@@ -39,6 +40,10 @@ function App() {
       ))}
       {studentInfo.map((student, id) => (
         <Student key={id} {...student} />
+      ))}
+
+      {todoData.map((todo, id) => (
+        <Todo key={id} {...todo} />
       ))}
     </>
   );
